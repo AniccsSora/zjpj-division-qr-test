@@ -8,7 +8,7 @@ import qrcode as QRCode
 class Message:
     def process_request(self, text):
         try:
-            # 在這裡，您可以註解掉實際的 DB 讀取部分，並假設資料已經被寫入 DB
+            # 可以註解掉實際的 DB 讀取部分，並假設資料已經被寫入 DB
             # connection = DB().fun()
             # cursor = connection.cursor()
             # cursor.execute("TRUNCATE TABLE msg")
@@ -34,10 +34,10 @@ class Message:
                 enc = cipher_helper.cipher("12345678", val1)
                 print("Encrypted text:", enc)
                 iname = skey + "img" + str(i)
-                # 存儲 QR Code 圖片到本地
+                # 存儲 QR Code 圖片到 local
                 qr.qr(enc, "path/to/your/image/directory/" + iname + ".png")
 
-                # 假設將資料寫入本地檔案而不是 DB
+                # 假設將資料寫入local而不是 DB
                 with open("path/to/your/data/directory/" + iname + ".txt", "w") as file:
                     file.write(f"Name: {name}\nID: {id}\nText: {val1}\nEncrypted: {enc}\nSecret Key: {skey}\n")
 
@@ -47,6 +47,6 @@ class Message:
             print("An error occurred:", ex)
 
 if __name__ == "__main__":
-    text_to_process = "Your text here"  # 替換為要處理的文本
+    text_to_process = "Your text here"  # 替換為要處理的TEXT
     message_processor = Message()
     message_processor.process_request(text_to_process)

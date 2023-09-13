@@ -12,9 +12,9 @@ class Merge:
             email = session.getAttribute("email")
             name = request.getParameter("name")
 
-            # con = new DB().fun()  # 請自行替換為適當的資料庫連接程式碼
+            # con = new DB().fun()  #
 
-            # 請自行實現資料庫查詢部分
+
             # query1 = con.prepareStatement("SELECT * FROM msg where rname='" + name + "'  ")
             # rs = query1.executeQuery()
 
@@ -24,7 +24,7 @@ class Merge:
             content = ""
             skey = ""
 
-            # 假設您有多個 QR Code 圖片的檔案路徑
+            # 假設有多個 QR Code 圖片的檔案路徑
             file_paths = [
                 sc.getRealPath("images") + "\\" + "image1.png",
                 sc.getRealPath("images") + "\\" + "image2.png"
@@ -51,18 +51,17 @@ class Merge:
             fr = "otpmessenger"  # without @gmail.com
             pw = "qawsedrftg"  # sender password
 
-            # 請自行實現郵件發送部分
             # mail.sendFromGMail(fr, pw, em, subject, message)
 
             out.println("<script>"
                         + "alert('Merged Successfully')"
                         + "</script>")
 
-            # 請自行處理 request 轉發部分
+            # 處理 request 轉發部分
             # requestDispatcher = request.getRequestDispatcher("Merge.jsp")
             # requestDispatcher.include(request, response)
 
         except Exception as ex:
             print(ex)
 
-    # 請自行實現 doGet 和 doPost 方法，根據您的應用需求進行處理
+    # 實現 doGet 和 doPost 方法
