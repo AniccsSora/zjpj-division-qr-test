@@ -46,7 +46,7 @@ def main():
     try:
         cipher_helper = CipherHelper()
         secret_key = "01234567"
-        data = "test"
+        data = "Hello how are you, I fine thank you and you?"
 
         encrypted_data = cipher_helper.cipher(secret_key, data)
         print("Encrypted Data:", encrypted_data)
