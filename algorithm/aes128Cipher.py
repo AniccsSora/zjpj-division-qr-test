@@ -24,12 +24,14 @@ class AES128Cipher:
         return decrypted_text[:-padding].decode('utf-8')
 
 def main():
-    key = "1234567890123456"  # 自己的密鑰 : 16 位up
+    key = "1234567890123456"  # self key words : 16 bitsup
     c = AES128Cipher(key)
     encrypted_text = c.encrypt("This is a test message.")
     decrypted_text = c.decrypt(encrypted_text)
+    print("Key:", key)
     print("Encrypted Text:", encrypted_text)
     print("Decrypted Text:", decrypted_text)
+
 
 if __name__ == "__main__":
     main()

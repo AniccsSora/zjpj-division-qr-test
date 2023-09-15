@@ -33,15 +33,12 @@ class DivisionAlgorithm:
 
 
 def main():
-    try:
-        division_algorithm = DivisionAlgorithm()
-        division_algorithm.set_values("This the test texttt abcccdd 1234", 5)  # 設定文本和最大字符數
-        val = division_algorithm.get_process()
-        for val1 in val:
-            print(">{}<".format(val1))
+    division_algorithm = DivisionAlgorithm()
+    division_algorithm.set_values("This the test texttt abcccdd 1234", 5)  # 設定文本和最大字符數
+    val = division_algorithm.get_process()
+    for val1 in val:
+        print(">{}<".format(val1))
 
-    except Exception as e:
-        print("Error:", e)
 
 if __name__ == "__main__":
     main()
